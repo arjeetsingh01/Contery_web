@@ -1,0 +1,114 @@
+[
+  {
+    "id": 1,
+    "countryName": "India",
+    "capital": "New Delhi",
+    "population": 1428000000,
+    "interestingFact": "India is the world's largest democracy and has the second-largest population."
+  },
+  {
+    "id": 2,
+    "countryName": "Switzerland",
+    "capital": "Bern",
+    "population": 8770000,
+    "interestingFact": "Home to the world's longest tunnel, the Gotthard Base Tunnel, at 57 km."
+  },
+  {
+    "id": 3,
+    "countryName": "Canada",
+    "capital": "Ottawa",
+    "population": 38000000,
+    "interestingFact": "Has the world's longest coastline, stretching over 202,080 km."
+  },
+  {
+    "id": 4,
+    "countryName": "Japan",
+    "capital": "Tokyo",
+    "population": 125800000,
+    "interestingFact": "Has the most vending machines per capita in the world."
+  },
+  {
+    "id": 5,
+    "countryName": "Germany",
+    "capital": "Berlin",
+    "population": 83200000,
+    "interestingFact": "The first printed book was in German - Gutenberg's Bible."
+  },
+  {
+    "id": 6,
+    "countryName": "Australia",
+    "capital": "Canberra",
+    "population": 26000000,
+    "interestingFact": "More kangaroos than people live in Australia."
+  },
+  {
+    "id": 7,
+    "countryName": "Norway",
+    "capital": "Oslo",
+    "population": 5400000,
+    "interestingFact": "Has one of the highest human development index (HDI) scores in the world."
+  },
+  {
+    "id": 8,
+    "countryName": "Sweden",
+    "capital": "Stockholm",
+    "population": 10300000,
+    "interestingFact": "Home to the world's first ice hotel, built in 1989."
+  },
+  {
+    "id": 9,
+    "countryName": "United States",
+    "capital": "Washington, D.C.",
+    "population": 331000000,
+    "interestingFact": "Has the largest economy in the world."
+  },
+  {
+    "id": 10,
+    "countryName": "Netherlands",
+    "capital": "Amsterdam",
+    "population": 17500000,
+    "interestingFact": "Over 25% of the country is below sea level."
+  },
+  {
+    "id": 11,
+    "countryName": "United Kingdom",
+    "capital": "London",
+    "population": 67000000,
+    "interestingFact": "Big Ben is actually the name of the bell, not the tower."
+  },
+  {
+    "id": 12,
+    "countryName": "New Zealand",
+    "capital": "Wellington",
+    "population": 5100000,
+    "interestingFact": "Has more sheep than people—around 10 times more!"
+  },
+  {
+    "id": 13,
+    "countryName": "Denmark",
+    "capital": "Copenhagen",
+    "population": 5800000,
+    "interestingFact": "Ranked as one of the happiest countries in the world."
+  },
+  {
+    "id": 14,
+    "countryName": "Finland",
+    "capital": "Helsinki",
+    "population": 5500000,
+    "interestingFact": "Has over 188,000 lakes."
+  },
+  {
+    "id": 15,
+    "countryName": "France",
+    "capital": "Paris",
+    "population": 67000000,
+    "interestingFact": "The Louvre is the most visited museum in the world."
+  },
+  {
+    "id": 16,
+    "countryName": "Singapore",
+    "capital": "Singapore",
+    "population": 5900000,
+    "interestingFact": "One of the cleanest cities in the world due to strict laws on littering."
+  }
+]
