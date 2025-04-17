@@ -10,37 +10,42 @@ import { Contery } from "./pages/Contery";
 import { Error } from "./pages/Error";
 import { ConteryDetalies } from "./components/Layout/ConteryDetalies";
 
-
 export const App = () => {
-  const router = createBrowserRouter([
+  const router = createBrowserRouter(
+    [
+      {
+        path: "/",
+        element: <AppLayout />,
+        errorElement: <Error />,
+        children: [
+          {
+            path: "/",
+            element: <Home />,
+          },
+          {
+            path: "/about",
+            element: <About />,
+          },
+          {
+            path: "/country",
+            element: <Contery />,
+          },
+          {
+            path: "/country/:id",
+            element: <ConteryDetalies />,
+          },
+          {
+            path: "/contact",
+            element: <Contact />,
+          },
+        ],
+      },
+    ],
     {
-      path: "/",
-      element: <AppLayout />,
-      errorElement:<Error/>,
-      children: [
-        {
-          path: "/", 
-          element: <Home />,
-        },
-        {
-          path: "/about",
-          element: <About/>,
-        },
-        {
-          path: "/country",
-          element: <Contery/>, // Fixed incorrect component name
-        },
-        {
-          path: "/country/:id",
-          element: <ConteryDetalies/>, // Fixed incorrect component name
-        },
-        {
-          path: "/contact",
-          element: <Contact />,
-        },
-      ],
-    },
-  ]);
+      // Set the basename for the Router to match the deployed sub-path
+      basename: "/countrys", // Ensure the base path is set to your GitHub Pages repo name
+    }
+  );
 
   return <RouterProvider router={router} />;
 };
