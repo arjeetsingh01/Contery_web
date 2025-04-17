@@ -1,64 +1,61 @@
-import React, { useEffect, useState, useTransition } from 'react'
+import React, { useEffect, useState, useTransition } from 'react';
 import { getCountryData } from '../Countery/postApi';
 import { Loadear } from '../components/ui/Lodear';
 import { Cardcanter } from '../components/Layout/Cardcanter';
 import { SearchFilter } from '../components/ui/SearchFilter';
 
-
-
-
 export const Contery = () => {
-
   const [isPanding, startTransition] = useTransition();
   const [conteries, setConteries] = useState([]);
-  const [search, setSearch] = useState()
-  const [filter, setFilter] = useState("all")
+  const [search, setSearch] = useState("");
+  const [filter, setFilter] = useState("all");
 
-  useEffect(()=>{
-    startTransition(async()=>{
+  useEffect(() => {
+    startTransition(async () => {
       const res = await getCountryData();
-      setConteries(res.data)
-      console.log(res)
-    })
-  },[])
+      setConteries(res.data);
+      console.log(res);
+    });
+  }, []);
 
-  if(isPanding) return <Loadear/>;
+  if (isPanding) return <Loadear />;
 
-  // Search Work 
-  const seracrhCountery = (countery)=>{
-    if(search){
-      return countery.name.common.toLowerCase().includes(search.toLowerCase());
+  // Search Function
+  const seracrhCountery = (country) => {
+    if (search) {
+      return country.name.common.toLowerCase().includes(search.toLowerCase());
     }
-    return countery;
-  }
+    return true; // Return true to keep all countries when no search is entered
+  };
 
-  const filterResgion = (countery) =>{
-    if( filter == "all") return countery;
-    return countery.region == filter;
-  }
- 
-  const filterConteris =  conteries.filter((countery)=> seracrhCountery(countery) && filterResgion(countery));
+  // Filter by Region
+  const filterResgion = (country) => {
+    if (filter === "all") return true;
+    return country.region === filter;
+  };
 
+  const filterConteris = conteries.filter(
+    (country) => seracrhCountery(country) && filterResgion(country)
+  );
 
   return (
-    <section className="py-10  px-6  bg-black min-h-screen ">
-     
-     <SearchFilter
-      search = {search}
-      setSearch = {setSearch}
-      filter = {filter}
-      setFilter = {setFilter}
-      conteries = {conteries}
-      setConteries = {setConteries}
-     />
+    <section className="py-10 px-4 sm:px-6 md:px-10 lg:px-16 bg-black min-h-screen">
+      {/* Search and Filter Component */}
+      <SearchFilter
+        search={search}
+        setSearch={setSearch}
+        filter={filter}
+        setFilter={setFilter}
+        conteries={conteries}
+        setConteries={setConteries}
+      />
 
-      <ul  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {
-          filterConteris.map((curt)=>{ 
-              return <Cardcanter key={curt.index} country={curt}/>
-            })
-        }
+      {/* Country Cards */}
+      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+        {filterConteris.map((curt, index) => (
+          <Cardcanter key={index} country={curt} />
+        ))}
       </ul>
     </section>
-  )
-}
+  );
+};

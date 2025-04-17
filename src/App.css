@@ -68,3 +68,79 @@ button {
   max-width: 140rem;
   margin: auto;
 }
+
+/* Responsive CSS */
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 3rem;
+  }
+
+  p, li, a, button {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  p, li, a, button {
+    font-size: 1.5rem;
+  }
+
+  button {
+    padding: 0.5rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  p, li, a, button {
+    font-size: 1.4rem;
+  }
+
+  button {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  p, li, a, button {
+    font-size: 1.3rem;
+  }
+
+  button {
+    padding: 0.4rem 1.6rem;
+    font-size: 1.3rem;
+  }
+}

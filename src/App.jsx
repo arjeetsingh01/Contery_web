@@ -19,7 +19,7 @@ export const App = () => {
       errorElement:<Error/>,
       children: [
         {
-          path: "/", // Fixed home path inside layout
+          path: "/", 
           element: <Home />,
         },
         {

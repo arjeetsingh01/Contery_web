@@ -19,27 +19,27 @@ export const SearchFilter = ({ search, setSearch, filter, setFilter, conteries, 
   };
 
   return (
-    <section className="flex flex-row justify-between items-center p-3 rounded-lg shadow-md text-white min-h-[50px] mb-6 bg-gray-800">
+    <section className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 p-4 rounded-lg shadow-md text-white min-h-[50px] mb-6 bg-gray-800">
       {/* Search Input */}
       <input
         type="text"
         placeholder="Search"
         value={search}
         onChange={handleSearchChange}
-        className="w-1/4 p-2 bg-white text-black rounded-md border border-gray-300 focus:outline-none"
+        className="w-full md:w-1/4 p-2 bg-white text-black rounded-md border border-gray-300 focus:outline-none"
       />
 
       {/* Sort Buttons */}
-      <div className="flex gap-4">
+      <div className="flex gap-4 w-full md:w-auto justify-between md:justify-start">
         <button
           onClick={() => shortContery("asc")}
-          className="bg-white text-black px-4 py-2 rounded-md hover:bg-gray-300 transition"
+          className="w-full md:w-auto bg-white text-black px-4 py-2 rounded-md hover:bg-gray-300 transition"
         >
           Asc
         </button>
         <button
           onClick={() => shortContery("dsc")}
-          className="bg-white text-black px-4 py-2 rounded-md hover:bg-gray-300 transition"
+          className="w-full md:w-auto bg-white text-black px-4 py-2 rounded-md hover:bg-gray-300 transition"
         >
           Dsc
         </button>
@@ -49,7 +49,7 @@ export const SearchFilter = ({ search, setSearch, filter, setFilter, conteries, 
       <select
         value={filter}
         onChange={handleSelectChange}
-        className="w-1/6 p-2 bg-white text-black rounded-md border border-gray-300 focus:outline-none"
+        className="w-full md:w-1/6 p-2 bg-white text-black rounded-md border border-gray-300 focus:outline-none"
       >
         <option value="all">All</option>
         <option value="Africa">Africa</option>
