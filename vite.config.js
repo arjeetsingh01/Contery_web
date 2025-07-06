@@ -6,3 +6,4 @@ export default defineConfig({
   base: '/Contery_web/', // 👈 repo name same hona chahiye
   plugins: [react()],
 });
+  
