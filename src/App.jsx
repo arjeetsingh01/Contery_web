@@ -43,7 +43,7 @@ export const App = () => {
     ],
     {
       // Set the basename for the Router to match the deployed sub-path
-      basename: "/countrys", // Ensure the base path is set to your GitHub Pages repo name
+      basename: "/Contery_web", // Ensure the base path is set to your GitHub Pages repo name
     }
   );
 
